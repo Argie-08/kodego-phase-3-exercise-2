@@ -1,5 +1,8 @@
 // so confusing what to do sir :)
 
+// const strings = ["hello", "world"];
+// const character = "l";
+
 // function countChar(arr, char) {
 //   let result = [];
 
@@ -14,18 +17,23 @@
 //   }
 //   return result;
 // }
-// const strings = ["hello", "world"];
-// const character = "l";
 // const counts = countChar(strings, character);
 // console.log(counts);
 
-const strings = ["hello", "world"];
-const toCount = "l";
+// const strings = ["hello", "world"];
+// const toCount = "l";
 
-function countChar(string, character) {
-  return string.map((str) => {
-    return str.split(character).length - 1;
-  });
+// function countChar(string, character) {
+//   return string.map((str) => {
+//     return str.split(character).length - 1;
+//   });
+// }
+// const usage = countChar(strings, toCount);
+// console.log(usage);
+
+function countInstance(words, char) {
+  return words.map((str) => str.split("").filter((c) => c === char).length);
 }
-const usage = countChar(strings, toCount);
-console.log(usage);
+
+const answer = countInstance(["hello", "world"], "l");
+console.log(answer);
